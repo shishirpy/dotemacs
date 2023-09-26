@@ -1,3 +1,4 @@
+;;(add-to-list 'image-types 'svg)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") )
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
@@ -12,7 +13,7 @@
  '(custom-safe-themes
    '("7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf" "bbb13492a15c3258f29c21d251da1e62f1abb8bbd492386a673dcfab474186af" default))
  '(package-selected-packages
-   '(projectile spacemacs-theme auto-complete pg emacsql-psql elixir-ts-mode elixir-mode json-mode)))
+   '(erlang magit projectile spacemacs-theme auto-complete pg emacsql-psql elixir-ts-mode elixir-mode json-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,10 +34,8 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/org/home.org")
+(setq org-agenda-files (list "~/org/home.org"))
 
-;; Line numbers globally
-(global-linum-mode t)
 
 (require 'projectile)
 ;; Recommended keymap prefix on macOS
@@ -47,3 +46,7 @@
 
 ;; Global Theme
 (load-theme 'spacemacs-dark)
+
+;; Font size
+;;(set-face-attribute 'default nil :font "Monospace" :height 160)
+
