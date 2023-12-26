@@ -50,3 +50,6 @@
 ;; Font size
 ;;(set-face-attribute 'default nil :font "Monospace" :height 160)
 
+;; Ivy mode
+(ivy-mode 1)
+
